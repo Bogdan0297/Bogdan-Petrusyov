@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "c298a6b2-012a-43dd-8b4f-75b2fbb99299",
+		"name": "PetrusyovHillel_user_profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22427059"
+	},
+	"item": [
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bogdanpetr1@gmail.com\",\r\n  \"password\": \"Qwerty123456\",\r\n  \"remember\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/auth/signin",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_current_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/current",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_profile_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit_profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"photo\": \"user-1621352948859.jpg\",\r\n  \"name\": \"Bogdan\",\r\n  \"lastName\": \"Petrusyov\",\r\n  \"dateBirth\": \"1997-03-02T15:21:05.000Z\",\r\n  \"country\": \"Ukraine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/settings",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit_user_settings",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"currency\": \"usd\",\r\n  \"distanceUnits\": \"km\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/users/settings",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"users",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

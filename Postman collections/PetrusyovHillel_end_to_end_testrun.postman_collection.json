@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "5ff9b7ee-ebc1-4caa-a716-7bf840f7e1bd",
+		"name": "PetrusyovHillel_end_to_end_testrun",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22427059"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bogdan\",\r\n  \"lastName\": \"Petrusyovvvv\",\r\n  \"email\": \"bogdanpetr1@gmail.com\",\r\n  \"password\": \"Qwerty123456\",\r\n  \"repeatPassword\": \"Qwerty123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/auth/signup",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"12900\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bogdanpetr1@gmail.com\",\r\n  \"password\": \"Qwerty123456\",\r\n  \"remember\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/auth/signin",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_car_brands_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/cars/brands",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_car_models_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/cars/models",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars",
+						"models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car_creation_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 4,\r\n  \"carModelId\": 16,\r\n  \"mileage\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/cars",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car_1_add_an_expense",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": 18554,\r\n  \"reportedAt\": \"2022-08-17\",\r\n  \"mileage\": 130,\r\n  \"liters\": 12,\r\n  \"totalCost\": 13,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/expenses",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car_creation_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/cars",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car_2_editing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 6,\r\n  \"carModelId\": 2,\r\n  \"mileage\": 168223\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/cars/18572",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars",
+						"18572"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_Car_2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/cars/18555",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars",
+						"18555"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_current_cars_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/cars/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"cars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/auth/logout",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://qauto.forstudy.space/"
+		},
+		{
+			"key": "email",
+			"value": "bogdanpetr1@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "NOT SENSITIVE",
+			"type": "string"
+		}
+	]
+}
