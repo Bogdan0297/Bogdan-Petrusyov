@@ -1,7 +1,7 @@
 <h1>Hi, I'm Bogdan! <br/></h1>
 <p> I am graduate of QA Manual course by Hillel IT School. I aspire to get Junior QA position and help to make your product better. <p/p>
 
-<h2>👨‍💻 My resume:</h2>
+<h2>📝 My resume:</h2>
 <a href = "https://github.com/Bogdan0297/Bogdan-Petrusyov/blob/bogdan/Resume%20PDF/CV_Bogdan_Petrusyov_QA.pdf"> Resume link </a>
 
 <h2>⚡ My skills</h2>
@@ -16,7 +16,7 @@
 - HTML, CSS
 - Jmeter
 
-<h2> 🤳 Some of my work from QA Manual course:</h2>
+<h2> 🖥️ Some of my work from QA Manual course:</h2>
 
 - <b>Test documentation:</b>
   - [Test cases](https://docs.google.com/spreadsheets/d/1eTWzeFhYfvHJ-_tyhr84Rkmu33uykPn3mQUkWN0Fpn4/edit#gid=955615526)<br>
